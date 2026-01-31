@@ -7,7 +7,7 @@ import (
 
 func main(){
 	argc := len(os.Args)
-	if argc == 1 {
+	if argc < 3 {
 		printDefaultMessage()
 		return
 	}
@@ -31,9 +31,9 @@ func printHelpMessage(){
 	fmt.Printf(
 `To use gincrud, write the command like this:
 
-gincrud [command] [args]\n\n
+gincrud [command] [args]
 
-these are the commands:\n
+these are the commands:
 create - creates a crud with the resource you named : [resource name] [output directory]
 `)
 }
