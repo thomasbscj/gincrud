@@ -295,7 +295,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func register%sRoute(r *gin.Group){
+func register%sRoute(r *gin.RouterGroup){
 
 	v := r.Group("%ss")
 

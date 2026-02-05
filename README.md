@@ -48,6 +48,7 @@ go run main.go create book ./output/
 ```
 
 Observações sobre o parâmetro de saída:
+
 - Recomenda-se incluir a barra final no caminho de saída (`./output/`) para que o diretório do recurso seja criado como `./output/<resource>`.
 
 ## O que é gerado
