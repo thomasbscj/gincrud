@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 )
@@ -20,6 +21,10 @@ func main(){
 	switch(command){
 		case "help": printHelpMessage()
 		case "create" : err = createResource(resourceName, outdir)
+		case "clean" : {
+			reTy := argv[4]
+			err = createClean(reTy, resourceName, outdir)
+			}
 		default : printDefaultMessage()
 	}
 	if err != nil {
@@ -35,7 +40,19 @@ gincrud [command] [args]
 
 these are the commands:
 create - creates a crud with the resource you named : [resource name] [output directory]
+clean - [resource name] [output diretory] [[model, controller, resource, service]] - creates a resource based on clean design
 `)
+}
+
+func createClean(resourceType string, resourceName string, outdir string)  error{
+	switch(resourceType){
+		case "controller" : return createControllerFile(resourceName, outdir)
+		case "service" : return createServiceFile(resourceName, outdir)
+		case "repository" : return createRepositoryFile(resourceName, outdir)
+		case "resource" : return createRepositoryFile(resourceName, outdir)
+		case "model" : return createModelFile(resourceName, outdir)
+		default: return errors.New("Not known resource")
+	}
 }
 
 func createResource(resourceName string, outdir string)error{
