@@ -1,14 +1,9 @@
+# GINCRUD
 # Index
 - [English](#en)
 - [Português](#pt-br)
 
 # *EN*
-
-
-
-# *PT-BR*
-
-## gincrud
 
 A CLI tool written in Go that automatically generates the basic boilerplate (controller, model, repository, and service) for a resource using Gin Gonic.
 
@@ -18,7 +13,7 @@ The goal of this project is to speed up the creation of RESTful resources in app
 
 ### Prerequisites
 
-Go installed (Go 1.16+ recommended)
+- Go installed (Go 1.16+ recommended)
 
 ### Installation
 
@@ -41,9 +36,9 @@ gincrud [command] [resource-name] [output-directory]
 ``` 
 Supported commands:
 
-create — creates the set of files for the specified resource.
+- create — creates the set of files for the specified resource.
 
-help — displays help information.
+- help — displays help information.
 
 ### Example:
 
@@ -61,21 +56,21 @@ Notes about the output parameter:
 
 When running `create` for the resource book, the following files will be created (in the directory `./output/book`):
 
-`book.controller.go` — route registration and handlers (empty functions)
+- `book.controller.go` — route registration and handlers (empty functions)
 
-`book.model.go` — initial model definition (BookModel)
+- `book.model.go` — initial model definition (BookModel)
 
-`book.repository.go` — repository skeleton
+- `book.repository.go` — repository skeleton
 
-`book.service.go` — service skeleton
+- `book.service.go` — service skeleton
 
 The generated package uses the resource name in lowercase as the package name (e.g., `package book`).
 
 ### Best Practices
 
-Review and adapt the generated files before using them in production.
+- Review and adapt the generated files before using them in production.
 
-Add validation, error handling, and database integration as needed.
+- Add validation, error handling, and database integration as needed.
 
 ### Contribution
 
@@ -85,7 +80,9 @@ Pull requests are welcome. Open an issue to discuss larger changes.
 
 MIT — feel free to use and adapt this project.
 
-## gincrud
+
+# *PT-BR*
+
 
 Ferramenta CLI escrita em Go que gera automaticamente o boilerplate básico (controller, model, repository e service) para um recurso utilizando Gin Gonic.
 
