@@ -85,7 +85,7 @@ func printDefaultMessage(){
 }
 
 func createRepositoryFile(resourceName string, outdir string) error{
-	repoFile, err := os.Create(outdir + resourceName + ".repository.go")
+	repoFile, err := os.Create(outdir + "/" + resourceName + ".repository.go")
 	if err != nil {
 		return err
 	}
@@ -97,7 +97,7 @@ func createRepositoryFile(resourceName string, outdir string) error{
 }
 
 func createServiceFile(resourceName string, outdir string) error{
-	serviceFile, err := os.Create(outdir + resourceName + ".service.go")
+	serviceFile, err := os.Create(outdir + "/" + resourceName + ".service.go")
 	if err != nil {
 		return err
 	}
@@ -109,7 +109,7 @@ func createServiceFile(resourceName string, outdir string) error{
 }
 
 func createModelFile(resourceName string, outdir string) error{
-	modelFile, err := os.Create(outdir + resourceName + ".model.go")
+	modelFile, err := os.Create(outdir + "/"+ resourceName + ".model.go")
 	if err != nil {
 		return err
 	}
@@ -121,7 +121,7 @@ func createModelFile(resourceName string, outdir string) error{
 }
 
 func createControllerFile(resourceName string, outdir string) error{
-	controllerFile, err := os.Create(outdir + resourceName + ".controller.go")
+	controllerFile, err := os.Create(outdir+ "/" + resourceName + ".controller.go")
 	if err != nil {
 		return err
 	}
